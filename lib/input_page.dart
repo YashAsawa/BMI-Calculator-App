@@ -118,101 +118,107 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Expanded(
-              child: Row(
-            children: <Widget>[
-              Expanded(
-                child: ReusableCard(
-                  colour: kActiveCardColour,
-                  cardChild: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'WEIGHT',
-                        style: kLabelTextStyle,
-                      ),
-                      Text(
-                        weight.toString(),
-                        style: kNumberTextStyle,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          RoundIconButton(
-                            icon: FontAwesomeIcons.minus,
-                            onPressed: () {
-                            setState(() {
-                              weight--;
-                            });
-                            },
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RoundIconButton(
-                            icon: FontAwesomeIcons.plus,
-                            onPressed: () {
-                            setState(() {
-                              weight++;
-                            });
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: ReusableCard(
+                    colour: kActiveCardColour,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'WEIGHT',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: () {
+                                setState(() {
+                                  weight--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: () {
+                                setState(() {
+                                  weight++;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: ReusableCard(
-                  colour: kActiveCardColour,
-                  cardChild: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'AGE',
-                        style: kLabelTextStyle,
-                      ),
-                      Text(
-                        age.toString(),
-                        style: kNumberTextStyle,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          RoundIconButton(
-                            icon: FontAwesomeIcons.minus,
-                            onPressed: () {
-                              setState(() {
-                                age--;
-                              });
-                            },
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          RoundIconButton(
-                            icon: FontAwesomeIcons.plus,
-                            onPressed: () {
-                              setState(() {
-                                age++;
-                              });
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
+                Expanded(
+                  child: ReusableCard(
+                    colour: kActiveCardColour,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'AGE',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          age.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: () {
+                                setState(() {
+                                  age--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: () {
+                                setState(() {
+                                  age++;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-               ],
-                ),),
+              ],
+            ),
+          ),
           GestureDetector(
-            onTap:() {
+            onTap: () {
               Navigator.push(context,
-                 MaterialPageRoute(builder: (context) => ResultsPage()) );
+                  MaterialPageRoute(builder: (context) => ResultsPage()));
             },
             child: Container(
-              child: Text('Calculate'),
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: kLargeButtonTextStyle,
+                ),
+              ),
               color: kBottomContainerColour,
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
